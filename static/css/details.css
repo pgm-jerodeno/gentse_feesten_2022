@@ -1,0 +1,214 @@
+.detailed-event {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--padding-8);
+  gap: var(--padding-8);
+}
+
+.detailed-event .column {
+  width: calc(50% - 24px);
+}
+
+.detailed-event .link-back a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.detailed-event .link-back svg {
+  fill: white;
+  transform: rotate(180deg);
+}
+
+.detailed-event .link-back span {
+  padding-left: var(--padding-4);
+  transform: translateX(-3rem);
+  background-color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.detailed-event .link-back:hover span {
+  animation: arrow-animation 0.5s ease forwards;
+}
+
+.detailed-event h1 {
+  margin: var(--padding-4) 0;
+}
+
+.detailed-event .subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.detailed-event .subtitle .location {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-red);
+  color: black;
+  padding: var(--padding);
+  margin-right: var(--padding-4);
+}
+
+.detailed-event .subtitle .location svg {
+  height: 1rem;
+}
+
+.detailed-event .description {
+  margin: var(--padding-8) 0;
+}
+
+.detailed-event .detailed-info div {
+  display: flex;
+  margin-bottom: var(--padding-2);
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.detailed-event .detailed-info a {
+  color: white;
+}
+
+.detailed-event .detailed-info .website a {
+  display: flex;
+  align-items: center;
+}
+
+.detailed-event .detailed-info .website a svg {
+  fill: white;
+  transform: rotate(180deg);
+  height: 1.1rem;
+}
+
+.detailed-event .map-wrapper {
+  display: flex;
+}
+
+.detailed-event .map-wrapper .map-info {
+  background-color: var(--color-red);
+  width: 40%;
+  padding: var(--padding-6);
+}
+
+.detailed-event .map-wrapper .map-info .location {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  width: max-content;
+  padding: var(--padding-2);
+  margin-bottom: var(--padding-4);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.detailed-event .map-wrapper .map-info .location svg {
+  fill: white;
+  height: 1.2rem;
+  margin-right: var(--padding-2);
+}
+
+.detailed-event .map-wrapper .map-info a {
+  color: black;
+  font-size: 1.1rem;
+}
+
+.detailed-event .map-wrapper .map-info .festival-plan {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  width: max-content;
+  padding: var(--padding-2);
+  margin-top: var(--padding-4);
+  color: black;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.detailed-event .map-wrapper .map-info .festival-plan svg {
+  height: 1.2rem;
+}
+
+.detailed-event .map-wrapper .map-info .festival-plan:hover {
+  cursor: pointer;
+  background-color: white;
+  transition: ease 0.5s;
+}
+
+.detailed-event .map-wrapper .map {
+  width: 60%;
+}
+
+.detailed-event .events-other {
+  width: 100%;
+}
+
+.detailed-event .events-other h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: var(--padding-8);
+}
+
+.detailed-event .events-other .event-other {
+  display: flex;
+  width: 100%;
+}
+
+.detailed-event .events-other .event-other div {
+  border: 1px solid white;
+  padding: var(--padding-4);
+  font-size: 1.1rem;
+}
+
+.detailed-event .events-other .event-other .event-other__time {
+  width: 20%;
+}
+
+.detailed-event .events-other .event-other .event-other__time span:first-of-type {
+  margin-right: var(--padding-3);
+}
+
+.detailed-event .events-other .event-other .event-other__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 50%;
+}
+
+.detailed-event .events-other .event-other .event-other__location {
+  width: 30%;
+}
+
+.detailed-event .events-other a {
+  display: block;
+  margin: var(--padding-8) auto;
+  padding: var(--padding-3);
+  border: 1px solid white;
+  width: max-content;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.detailed-event .events-other a:hover {
+  background-color: white;
+  color: black;
+  transition: ease 0.5s;
+}
+
+@media (max-width: 1280px) {
+  .detailed-event h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .detailed-event {
+    flex-direction: column;
+  }
+
+  .detailed-event .column {
+    width: 100%;
+  }
+}

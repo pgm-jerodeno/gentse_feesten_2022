@@ -1,0 +1,98 @@
+.page-title h1 {
+  transform: translateX(-50%);
+}
+
+.search-box__wrapper .container {
+  position: relative;
+}
+
+.search-box__wrapper #formSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 960px;
+  max-width: 960px;
+  margin: var(--padding-10) auto;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.search-box__wrapper #search {
+  flex-grow: 1;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  padding: var(--padding-2);
+  border: none;
+}
+
+.search-box__wrapper #search::placeholder {
+  color: white;
+}
+
+.search-box__wrapper #formSearch button {
+  background-color: black;
+  height: 100%;
+  justify-self: center;
+  border: none;
+}
+
+.search-box__wrapper #formSearch button svg {
+  fill: white;
+  height: 1.5rem;
+}
+
+.search-box__wrapper #formSearch button:hover {
+  background-color: var(--color-red);
+  cursor: pointer;
+}
+
+.search-box__wrapper #formSearch button:hover svg {
+  fill:black;
+}
+
+.search-box__wrapper .search-result-string {
+  margin: 0 auto var(--padding-10);
+  color: white;
+  font-size: 1.2rem;
+}
+
+.search-box__wrapper .lay-out-selector {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  padding-right: var(--padding-6);
+}
+
+.search-box__wrapper .lay-out-selector div {
+  padding: var(--padding-2) var(--padding);
+}
+
+.search-box__wrapper .lay-out-selector div.active {
+  background-color: var(--color-red);
+}
+
+.search-box__wrapper .lay-out-selector svg {
+  fill: white;
+  height: 1.2rem;
+}
+
+.search-box__wrapper .lay-out-selector div.active svg {
+  fill: black;
+}
+
+.search-box__wrapper .lay-out-selector div:hover {
+  background-color: var(--color-red);
+  cursor: pointer;
+}
+
+.search-box__wrapper .lay-out-selector div:hover svg {
+  fill: black;
+}
+
+.search__results.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--padding-6);
+}

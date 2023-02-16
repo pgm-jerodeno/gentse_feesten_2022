@@ -1,0 +1,236 @@
+header .logo {
+  margin-bottom: var(--padding-8);
+}
+
+header .logo h2 {
+  font-size: 2rem;
+  min-width: 9rem;
+  width: 9rem;
+  margin-bottom: var(--padding);
+}
+
+header .logo .date {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.nav__list {
+  display: flex;
+  padding: var(--padding-4) 0;
+  list-style: none;
+}
+
+nav.primary .nav__list-item {
+  margin-left: var(--padding-6);
+  margin-top: var(--padding-4);
+}
+
+.nav__list-item a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav.primary .nav__list-item a::after {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 30px;
+  content: "";
+  border-bottom: 3px solid white;
+  visibility: hidden;
+}
+
+nav.primary .nav__list-item:hover a::after {
+  visibility: visible;
+}
+
+nav.primary .nav__list-item:first-of-type {
+  margin: 0;
+}
+
+nav.primary .nav__list-item:first-of-type a::after {
+  border-bottom: none;
+}
+
+nav.secondary {
+  background-color: var(--color-red);
+  padding-left: var(--padding-16);
+  padding-right: var(--padding-4);
+  padding-top: var(--padding-4);
+}
+
+nav.secondary .nav__list-item {
+  margin-left: var(--padding-6);
+}
+
+nav.secondary .nav__list-item a {
+  color: black;
+}
+
+nav.secondary .nav__list-item:first-of-type a::after {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 30px;
+  content: "";
+  border-bottom: 3px solid white;
+  visibility: hidden;
+}
+
+nav.secondary .nav__list-item:hover a {
+  color: white;
+}
+
+nav.secondary .nav__list-item:hover a::after {
+  visibility: visible;
+}
+
+nav.secondary .nav__list-item:hover svg {
+  fill: white;
+  cursor: pointer;
+}
+
+nav.hamburger {
+  position: fixed;
+  transform: translateX(-100vw);
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--color-red);
+  background-image: url('../img/hero-desktop.jpg');
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  padding: var(--padding-8) var(--padding-16);
+  font-size: 1.2rem;
+}
+
+nav.hamburger.isopen {
+  transform: translateX(0);
+}
+
+.hamburger .logo h2 {
+  color: black;
+}
+
+.hamburger__navigation {
+  display: flex;
+}
+
+.hamburger ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hamburger ul li {
+  padding: var(--padding-4) 0;
+}
+
+.hamburger a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hamburger__list-item a {
+  display: flex;
+}
+
+.hamburger__list-item a svg {
+  height: 1.2rem;
+  align-self: center;
+  margin-left: var(--padding-4);
+}
+
+.hamburger__programme {
+  margin-top: var(--padding-12);
+  margin-left: var(--padding-8);
+}
+
+.hamburger__buttons {
+  display: flex;
+  position: absolute;
+  top: var(--padding-8);
+  right: var(--padding-16);
+  z-index: 1;
+}
+
+.hamburger__buttons svg {
+  fill:white;
+  margin-left: var(--padding-6);
+  height: 1.5rem;
+}
+
+.hamburger__buttons .close svg:hover {
+  cursor: pointer;
+}
+
+.hamburger a:hover {
+  color: white;
+}
+
+.hamburger .logo a:hover {
+  color: black;
+}
+
+.hamburger a:hover svg {
+  fill: white;
+}
+
+@media (max-width: 1280px) {
+  header .primary .nav__list .nav__list-item:not(:first-child) {
+    display: none;
+  }
+
+  header .secondary .nav__list .nav__list-item:first-child {
+    display: none;
+  }
+
+  nav.hamburger {
+    background-image: none;
+  }
+
+  .hamburger__buttons svg {
+    fill:black;
+  }
+}
+
+@media (max-width: 770px) {
+  header .secondary {
+    background-color: hsla(0, 0%, 0%, 100%);
+    padding-left: 0;
+  }
+  
+  header .secondary .nav__list .nav__list-item:nth-child(2) {
+    display: none;
+  }
+
+  header .secondary .nav__list .nav__list-item.menu svg {
+    fill: white;
+  }
+
+  .hamburger__navigation {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .hamburger__navigation .hamburger__list-item:nth-of-type(2) {
+    margin-bottom: 50rem;
+  }
+
+  .hamburger__programme {
+    position: absolute;
+    top: 4.5rem;
+    font-size: 1rem;
+  }
+
+  .hamburger__list-item svg {
+    transform: rotate(90deg);
+    width: 1.5rem;
+  }
+}

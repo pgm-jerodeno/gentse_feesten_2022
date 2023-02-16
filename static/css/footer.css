@@ -1,0 +1,232 @@
+.footer-top {
+  position: relative;
+}
+
+.footer-top .strop {
+  position: absolute;
+  right: 0;
+  top: -13%;
+  z-index: -2;
+}
+
+.footer-top a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-top .pictures-link, .footer-top .video-link {
+  display: flex;
+  width: max-content;
+  margin-bottom: var(--padding-4);
+}
+
+.footer-top .pictures-link h2 {
+  background-color: var(--color-red);
+  padding: var(--padding-4);
+  color: black;
+}
+
+.footer-top .pictures-link img {
+  transform: translateX(-3rem);
+  background-color: var(--color-red);
+  padding: var(--padding-4);
+  padding-left: 0;
+  z-index: -1;
+}
+
+.footer-top .pictures-link:hover img {
+  animation: arrow-animation 0.5s ease forwards;
+}
+
+.footer-top .video-link h2 {
+  transform: translateX(-3rem);
+  background-color: var(--color-red);
+  padding: var(--padding-4);
+  z-index: -1;
+  color: black;
+}
+
+.footer-top .video-link:hover h2 {
+  animation: arrow-animation 0.5s ease forwards;
+}
+
+.footer-top .video-link img {
+  transform: rotate(180deg);
+  background-color: var(--color-red);
+  padding: var(--padding-4);
+  padding-left: 0;
+  z-index: -1;
+}
+
+.footer-top .newsletter {
+  color: white;
+  background-image: url('../img/hero-desktop.jpg');
+  background-position: 170% 15%;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  height: 25rem;
+  padding: var(--padding-4) 0;
+}
+
+.footer-top .newsletter > p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: var(--padding-4) 0;
+}
+
+.footer-top .newsletter form {
+  margin-top: var(--padding-8);
+}
+
+.footer-top .newsletter form input {
+  background-color: black;
+  border: none;
+  border-bottom: 3px solid #FFF;
+  padding: var(--padding-2);
+  color: white;
+}
+
+.footer-top .newsletter form input:focus {
+  border: 3px solid var(--color-red);
+}
+
+.footer-top .newsletter form input::placeholder {
+  color: white;
+}
+
+.footer-top .newsletter form button {
+  background-color: var(--color-red);
+  padding: var(--padding-2) var(--padding-6);
+  margin-left: var(--padding-4);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.footer-top .newsletter form button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.footer-top .newsletter form p {
+  margin-top: var(--padding-2);
+  font-size: 0.8rem;
+  color: var(--color-grey);
+}
+
+.footer-top .newsletter form p a {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: var(--color-red);
+  padding: var(--padding-8) 0;
+}
+
+.footer-bottom .row {
+  padding: var(--padding-4) 0;
+}
+
+.footer-bottom h2 {
+  color: black;
+}
+
+.footer-bottom .socials {
+  display: flex;
+  gap: var(--padding-2);
+}
+
+.footer-bottom .socials a {
+  position: relative;
+  background-color: black;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.footer-bottom .socials a svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  fill:#FFF;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.footer-bottom .logo {
+  width: 13.15rem;
+}
+
+.footer-bottom .logo a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-bottom .slogan, .footer-bottom .date {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.footer-bottom .line {
+  height: 2px;
+  flex-grow: 1;
+  background-color: black;
+  align-self: center;
+  margin: 0 var(--padding-4);
+}
+
+.footer-bottom .partners {
+  display: flex;
+}
+
+.footer-bottom .partners img {
+  height: 2rem;
+  margin-left: var(--padding-6);
+}
+
+.disclaimer {
+  color: var(--color-grey);
+  font-size: 0.8rem;
+  padding: var(--padding-4) 0;
+}
+
+.disclaimer__links a {
+  color: var(--color-grey);
+  text-decoration: none;
+  margin-right: var(--padding-2);
+}
+
+@media (max-width: 1280px) {
+  .footer-top h2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 770px) {
+  footer h2 {
+    font-size: 1.6rem;
+  }
+  .footer-bottom .row {
+    flex-direction: column;
+  }
+
+  .footer-bottom .logo {
+    margin-top: var(--padding-6);
+  }
+
+  .footer-bottom .logo h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-bottom .line {
+    width: 100%;
+    margin: var(--padding-2) 0;
+  }
+
+  .footer-bottom .partners {
+    margin-top: var(--padding-6);
+  }
+
+  .footer-bottom .partners a:first-of-type img {
+    margin-left: 0;
+  }
+}

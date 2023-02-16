@@ -1,0 +1,100 @@
+:root {
+  --color-red: hsl(0, 79%, 57%);
+  --color-grey: hsl(0, 0%, 70%);
+  --padding: 6px;
+  --padding-2: calc(2 * var(--padding));
+  --padding-3: calc(3 * var(--padding));
+  --padding-4: calc(4 * var(--padding));
+  --padding-6: calc(6 * var(--padding));
+  --padding-8: calc(8 * var(--padding));
+  --padding-10: calc(10 * var(--padding));
+  --padding-12: calc(12 * var(--padding));
+  --padding-16: calc(16 * var(--padding));
+  --padding-32: calc(32 * var(--padding));
+}
+
+body {
+  font-family: 'Stolzl', sans-serif;
+  line-height: 1.6rem;
+  background-color: black;
+}
+
+h1, h2, h3{
+  font-family: 'Stolzl Display', sans-serif;
+  line-height: 1em;
+  color: white;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: 'Stolzl', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 var(--padding-6);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* margin-bottom: var(--padding-4); */
+}
+
+.hidden {
+  display: none !important;
+}
+
+.page-title {
+  background-color: var(--color-red);
+  padding-top: var(--padding-4);
+  padding-bottom: var(--padding-10);
+  width: 28.6rem;
+  margin-left: auto;
+}
+
+.page-title h1 {
+  transform: translateX(-35%);
+  background-color: black;
+  padding: var(--padding-2);
+  width: max-content;
+}
+
+@keyframes arrow-animation {
+  0% {
+    transform: translateX(-3rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1280px) {
+  .page-title {
+    width: 17.4375rem;
+  }
+
+  .page-title h1 {
+    font-size: 2.4rem;
+    transform: translateX(-38%);
+  }
+}
+
+@media (max-width: 770px) {
+  .page-title {
+    padding-top: var(--padding-6);
+    padding-bottom: var(--padding-6);
+  }
+}

@@ -1,0 +1,262 @@
+.filter {
+  margin-bottom: var(--padding-16);
+}
+
+.filter .filter__title {
+  transform: rotate(-90deg) translateX(-34.5rem) translateY(2rem);
+  transform-origin: top left;
+  width: max-content;
+}
+
+.filter .filter__title::after {
+  background-color: var(--color-red);
+  position: absolute;
+  top: -3rem;
+  right: -1.5rem;
+  width: 125%;
+  height: 110%;
+  content: "";
+  z-index: -2;
+}
+
+.filter .filter__title h2 {
+  font-size: 7.5rem;
+  background-color: black;
+  padding: var(--padding-3);
+}
+
+.filter .filter__wrapper {
+  max-width: 85%;
+  width: calc(100% - 200px);
+  margin-left: auto;
+}
+
+.filter .filter__wrapper .filter__header .filter__header-categories {
+  display: flex;
+}
+
+.filter .filter__wrapper .filter__header .filter__header-categories > div,
+.filter .filter__wrapper .filter__header .filter__checks {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  padding: var(--padding-2);
+}
+
+.filter .filter__wrapper .filter__header svg {
+  fill: white;
+  height: 1.2rem;
+  margin-right: var(--padding);
+}
+
+.filter .filter__wrapper .filter__header .filter__header-categories > div:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.filter .filter__wrapper .filter__header .filter__header-categories > div:hover svg {
+  fill: black;
+}
+
+.filter .filter__wrapper .filter__header .filter__header-categories > div.current-cat {
+  background-color: white;
+  color: black;
+}
+
+.filter .filter__wrapper .filter__header .filter__header-categories > div.current-cat svg {
+  fill: black;
+}
+
+.filter .filter__wrapper .filter__header .filter__checks {
+  flex-grow: 1;
+}
+
+.filter .filter__wrapper #formCheck {
+  display: flex;
+}
+
+.filter .filter__wrapper #formCheck div {
+  display: flex;
+  align-items: center;
+}
+
+.filter .filter__wrapper #formCheck input {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: var(--padding);
+  border: 2px solid white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.filter .filter__wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style: none;
+  padding: var(--padding-10) var(--padding-6);
+  border: 1px solid white;
+}
+
+.filter .filter__wrapper ul li {
+  width: 50%;
+  margin-bottom: var(--padding-6);
+}
+
+.filter .filter__wrapper ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.filter .filter__wrapper ul li a svg {
+  fill: white;
+  height: 1.2rem;
+  margin-right: var(--padding-2);
+}
+
+.filter .filter__wrapper ul li a:hover {
+  text-decoration: underline;
+}
+
+.filter .filter__wrapper .filter__content {
+  position: relative;
+}
+
+.filter .filter__wrapper .filter__content .lay-out-selector {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.filter .filter__wrapper .filter__content .lay-out-selector div {
+  padding: var(--padding-2) var(--padding);
+}
+
+.filter .filter__wrapper .filter__content .lay-out-selector div.active {
+  background-color: var(--color-red);
+}
+
+.filter .filter__wrapper .filter__content .lay-out-selector svg {
+  fill: white;
+  height: 1.2rem;
+}
+
+.filter .filter__wrapper .filter__content .lay-out-selector div.active svg {
+  fill: black;
+}
+
+.filter .filter__wrapper .filter__content .lay-out-selector div:hover {
+  background-color: var(--color-red);
+  cursor: pointer;
+}
+
+.filter .filter__wrapper .filter__content .lay-out-selector div:hover svg {
+  fill: black;
+}
+
+.filter .filter__wrapper #formSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.filter .filter__wrapper #search {
+  flex-grow: 1;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  padding: var(--padding-2);
+  border: none;
+}
+
+.filter .filter__wrapper #search::placeholder {
+  color: white;
+}
+
+.filter .filter__wrapper #formSearch button {
+  background-color: black;
+  height: 100%;
+  justify-self: center;
+  border: none;
+}
+
+.filter .filter__wrapper #formSearch button svg {
+  fill: white;
+  height: 1.5rem;
+}
+
+.filter .filter__wrapper #formSearch button:hover {
+  background-color: var(--color-red);
+  cursor: pointer;
+}
+
+.filter .filter__wrapper #formSearch button:hover svg {
+  fill:black;
+}
+
+.filter .filter__wrapper .hidden {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .filter .filter__title {
+    display: none;
+  }
+
+  .filter .filter__wrapper {
+    margin-top: var(--padding-6);
+    margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .filter .filter__wrapper .filter__header span {
+    display: none;
+  }
+
+  .filter .filter__wrapper .filter__header svg {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1030px) {
+  .filter .filter__wrapper .filter__header {
+    flex-direction: column-reverse;
+  }
+
+  .filter__header-categories {
+    width: 100%;
+  }
+
+  .filter__header-categories > div {
+    flex-grow: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 770px) {
+  .filter .filter__wrapper ul {
+    flex-direction: column;
+  }
+  
+  .filter .filter__wrapper ul li {
+    width: 100%;
+  }
+
+  .filter .filter__wrapper #formSearch {
+    width: 100%;
+  }
+}
